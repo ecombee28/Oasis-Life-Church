@@ -1,0 +1,97 @@
+.location_container {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.location_container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url("../../images/phoenix.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: .2;
+}
+
+.location_text_area {
+    position: relative;
+    width: 40%;
+    height: auto;
+    padding: 20px 5px;
+}
+
+.location_text_area span {
+    font-size: clamp(3rem, 8vw, 7.5rem);
+    font-weight: bolder;
+    color: #000;
+    display: block;
+}
+
+.location_text_area p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.location_btn {
+    padding: 10px 12px;
+    color: #000;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    background-color: transparent;
+    border: 3px solid var(--gray);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-top: 40px;
+}
+
+.location_btn:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.location_map_wrapper {
+    position: relative;
+    width: 39%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.location_map_wrapper p {
+    font-size: clamp(.7rem, 3vw, 1.2rem);
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--gray);
+}
+
+@media screen and (max-width:980px) {
+    .location_container {
+        flex-direction: column;
+        height: auto;
+    }
+    .location_text_area {
+        position: relative;
+        width: 90%;
+        height: auto;
+        padding: 20px 5px;
+        margin-bottom: 60px;
+    }
+    .location_map_wrapper {
+        position: relative;
+        width: 90%;
+        height: 500px;
+    }
+}

@@ -1,0 +1,101 @@
+.meet_pastors_container {
+    width: 100%;
+    height: auto;
+    margin-top: 130px;
+    margin-bottom: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+.left_wrapper {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_container {
+    width: 500px;
+    height: 90%;
+    padding: 0 20px;
+}
+
+.text_container h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.text_container span {
+    font-size: clamp(3rem, 8vw, 7.5rem);
+    font-weight: bolder;
+    color: #000;
+    display: block;
+}
+
+.text_container p {
+    font-size: clamp(1rem, 2.8vw, 1.4rem);
+}
+
+.right_wrapper {
+    width: 47%;
+    height: auto;
+    position: relative;
+    margin-right: 50px;
+}
+
+.pastors_img {
+    width: 45vw;
+    height: 90%;
+    background: url("../../images/bruce.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 12px -4px rgba(0, 0, 0, 0.42);
+    box-shadow: 5px 5px 12px -4px rgba(0, 0, 0, 0.42);
+}
+
+.meet_pastor_btn {
+    color: #000 !important;
+    font-size: 1.5rem;
+    margin: 50px 0px;
+}
+
+.meet_pastor_btn:hover {
+    background-color: var(--blue) !important;
+    color: var(--white) !important;
+}
+
+@media screen and (max-width:1000px) {
+    .meet_pastors_container {
+        width: 100%;
+        height: auto;
+        margin-top: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left_wrapper {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .text_container {
+        width: 90%;
+        height: auto;
+    }
+    .right_wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pastors_img {
+        width: 90%;
+        height: 400px;
+        max-height: 600px;
+    }
+}

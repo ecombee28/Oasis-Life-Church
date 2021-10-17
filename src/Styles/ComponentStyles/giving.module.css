@@ -1,0 +1,61 @@
+.giving_container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_container {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    background-color: var(--blue);
+}
+
+.img_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../../images/bible.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: .6;
+}
+
+.giving_wrapper {
+    width: 100%;
+    height: auto;
+    padding: 10px 40px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.giving_wrapper p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: var(--text-gray);
+}
+
+.give_btn {
+    margin-top: 60px;
+}
+
+@media screen and (max-width:880px) {
+    .giving_container {
+        margin-bottom: 90px;
+    }
+    .giving_wrapper {
+        padding: 10px 10px;
+        margin-top: 50px;
+    }
+}

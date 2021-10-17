@@ -1,0 +1,49 @@
+.main_beliefs_container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.beliefs_wrapper {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(2.3rem, 4vw, 5rem);
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: var(--text-gray);
+}
+
+.image {
+    width: 75%;
+    object-fit: contain;
+}
+
+.body_wrapper {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.topic {
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    font-weight: 600;
+    color: var(--text-gray);
+}
+
+.text {
+    font-size: clamp(.8rem, 3vw, 1.3rem);
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 880px) {
+    .main_beliefs_container {
+        margin-bottom: 70px;
+    }
+}

@@ -1,0 +1,131 @@
+.hero_container {
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    background-image: url("../../images/praise-2.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero_wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, .6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+.hero_wrapper h1 {
+    font-size: clamp(3.5rem, 10vw, 12rem);
+}
+
+.hero_wrapper p {
+    font-size: clamp(1rem, 4vw, 1.7rem);
+    text-align: center;
+}
+
+.btn_wrapper {
+    width: 550px;
+    padding: 2px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero_btn {
+    color: var(--white) !important;
+    font-size: 1.5rem;
+    background-color: var(--blue) !important;
+}
+
+.hero_btn:hover {
+    background-color: var(--white) !important;
+    color: #000 !important;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll .icon {
+    font-size: 2.7rem;
+    cursor: pointer;
+}
+
+.scroll p {
+    font-size: 1rem;
+}
+
+@media screen and (max-width:680px) and (max-height:400px) {
+    .hero_wrapper h1 {
+        font-size: 3rem;
+        margin-top: 40px;
+    }
+    .hero_wrapper p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .btn_wrapper {
+        margin-top: 15px;
+    }
+    .scroll {
+        bottom: 10px;
+        left: 50%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .hero_wrapper p {
+        text-align: center;
+    }
+    .btn_wrapper {
+        width: 60%;
+    }
+    .hero_btn {
+        font-size: 1rem !important;
+        margin-left: 10px;
+    }
+    .scroll .icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .btn_wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .hero_wrapper h1 {
+        font-size: 3rem;
+        margin-top: 40px;
+    }
+    .hero_wrapper p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .btn_wrapper {
+        margin-top: 15px;
+    }
+    .scroll {
+        bottom: 10px;
+        left: 50%;
+    }
+}

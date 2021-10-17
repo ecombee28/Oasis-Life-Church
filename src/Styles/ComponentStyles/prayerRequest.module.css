@@ -1,0 +1,103 @@
+.main_prayer_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prayer_wrapper {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(2.3rem, 4vw, 5rem);
+    font-weight: 600;
+    margin-bottom: 60px;
+    color: var(--text-gray);
+    text-align: center;
+}
+
+.scripture {
+    font-size: clamp(.7rem, 2vw, 1.2rem);
+    margin-top: 50px;
+    color: rgb(255, 0, 0);
+}
+
+.scripture span {
+    color: #000;
+}
+
+.intro_text {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.form {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px 0px;
+    margin-top: 40px;
+}
+
+.form label {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 500;
+}
+
+.input {
+    width: 80%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+}
+
+.message {
+    height: 170px;
+    text-align: left;
+    resize: none;
+    padding-top: 10px;
+}
+
+.submit_button {}
+
+@media screen and (max-width: 1680px) {
+    .prayer_wrapper {
+        width: 90%;
+    }
+    .form {
+        width: 85%;
+    }
+    .input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .prayer_wrapper {
+        width: 97%;
+    }
+    .form {
+        width: 98%;
+    }
+    .input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .main_prayer_container {
+        margin-bottom: 50px;
+    }
+}
