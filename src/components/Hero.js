@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../Styles/ComponentStyles/hero.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const scrollToTop = () => {
@@ -18,7 +19,15 @@ const Hero = () => {
         <p>Join us live or in-person every Sunday at 10:30am</p>
         <div className={styles.btn_wrapper}>
           <button className={`btn ${styles.hero_btn}`}>Join us live</button>
-          <button className={`btn ${styles.hero_btn}`}>About us</button>
+
+          <Link
+            to={{
+              pathname: "/About",
+              aboutProps: { menu_focus: "ourStory" },
+            }}
+          >
+            <button className={`btn ${styles.hero_btn}`}>About us</button>
+          </Link>
         </div>
         <div className={styles.scroll}>
           <p>Scroll Down</p>

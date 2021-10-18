@@ -67,12 +67,12 @@
     padding-top: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .main_links_title {
-    font-size: clamp(1.3rem, 3vw, 3rem);
+    font-size: 3rem;
     font-weight: 600;
     color: var(--blue);
     padding: 0 35px 2px 35px;
@@ -105,7 +105,7 @@
 
 .selections {
     list-style: none;
-    font-size: clamp(1rem, 2vw, 1.7rem);
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
     cursor: pointer;
     margin-bottom: 10px;
     display: flex;
@@ -123,7 +123,7 @@
 }
 
 .bold {
-    font-size: clamp(1rem, 2.4vw, 2rem);
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
     font-weight: 600;
     color: var(--blue);
 }
@@ -132,12 +132,6 @@
     width: 72%;
     height: auto;
     min-height: 700px;
-}
-
-@media screen and (max-width:1480px) {
-    .bold {
-        font-size: clamp(1rem, 2.1vw, 1.7rem);
-    }
 }
 
 @media screen and (max-width:780px) {
@@ -167,13 +161,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .main_links_title {
-        font-size: clamp(1.3rem, 3vw, 3rem);
-        font-weight: 600;
-        color: var(--blue);
-        padding: 0 35px 2px 35px;
-        border-bottom: 2px solid var(--text-gray);
+        margin-bottom: 60px;
     }
     .menu_links {
         width: 100%;
@@ -191,27 +179,16 @@
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
         gap: 20px;
-    }
-    .selections {
-        list-style: none;
-        font-size: clamp(.65rem, 2.4vw, 2rem);
-        cursor: pointer;
     }
     .hide_icon {
         visibility: hidden;
     }
     .show_icon {
         visibility: hidden;
-    }
-    .bold {
-        font-size: clamp(.7rem, 2.7vw, 2.1rem);
-        font-weight: 600;
-        color: var(--blue);
     }
     .display_panel {
         width: 100%;

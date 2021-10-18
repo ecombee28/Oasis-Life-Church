@@ -47,14 +47,14 @@ const BottomNav = () => {
           }}
           style={{ textDecoration: "none" }}
         >
-          <p
+          <div
             className={`${styles.drop_menu_link} ${
               !show ? styles.fadeout : styles.fadein
             }`}
             onClick={closeMenu}
           >
             Our Story
-          </p>
+          </div>
         </Link>
         <Link
           to={{
@@ -63,14 +63,14 @@ const BottomNav = () => {
           }}
           style={{ textDecoration: "none" }}
         >
-          <p
+          <div
             className={`${styles.drop_menu_link} ${
               !show ? styles.fadeout : styles.fadein
             }`}
             onClick={closeMenu}
           >
             Our Beliefs
-          </p>
+          </div>
         </Link>
         <Link
           to={{
@@ -79,14 +79,14 @@ const BottomNav = () => {
           }}
           style={{ textDecoration: "none" }}
         >
-          <p
+          <div
             className={`${styles.drop_menu_link} ${
               !show ? styles.fadeout : styles.fadein
             }`}
             onClick={closeMenu}
           >
             {`Contact & Directions`}
-          </p>
+          </div>
         </Link>
         <Link
           to={{
@@ -95,14 +95,25 @@ const BottomNav = () => {
           }}
           style={{ textDecoration: "none" }}
         >
-          <p
+          <div
             className={`${styles.drop_menu_link} ${
               !show ? styles.fadeout : styles.fadein
             }`}
             onClick={closeMenu}
           >
             Prayer Request
-          </p>
+          </div>
+        </Link>
+
+        <Link to={`/Events`} style={{ textDecoration: "none" }}>
+          <div
+            className={`${styles.drop_menu_link} ${
+              !show ? styles.fadeout : styles.fadein
+            }`}
+            onClick={closeMenu}
+          >
+            Events
+          </div>
         </Link>
       </div>
 
@@ -114,22 +125,15 @@ const BottomNav = () => {
         </div>
         <div className={styles.bottom_link_container}>
           <li
-            className={styles.bottom_links}
+            className={`${styles.bottom_links} ${styles.about_stack}`}
             onClick={() => setShow(!show)}
             ref={ref}
           >
+            <FontAwesomeIcon
+              icon={faChevronUp}
+              className={`${styles.arrow_icon}  ${show && styles.rotate}`}
+            />
             About
-            {show ? (
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className={styles.arrow_icon}
-              />
-            ) : (
-              <FontAwesomeIcon
-                icon={faChevronUp}
-                className={styles.arrow_icon}
-              />
-            )}
           </li>
         </div>
         <div className={styles.bottom_link_container}>
@@ -141,6 +145,7 @@ const BottomNav = () => {
             <li className={styles.bottom_links}>Sermons</li>
           </Link>
         </div>
+
         <div className={styles.bottom_link_container}>
           <Link
             to={`/Give`}

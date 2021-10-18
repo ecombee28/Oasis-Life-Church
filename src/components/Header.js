@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "../Styles/ComponentStyles/header.module.css";
 import Logo from "../images/logo-2.png";
 import { Link } from "react-router-dom";
@@ -8,6 +8,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
+  const ref = useRef();
 
   const checkIfMenusOpen = () => {
     if (open) {
@@ -24,9 +25,26 @@ const Header = () => {
     console.log(showDropDown);
   };
 
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (showDropDown && ref.current && !ref.current.contains(e.target)) {
+        setShowDropDown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [showDropDown]);
+
   return (
     <>
-      <header className={`${open && styles.header_fixed}`}>
+      <header className={`${showDropDown && styles.black_background}`}>
         <div
           className={`${styles.logo_container} ${open && styles.logo_fixed}`}
         >
@@ -46,23 +64,20 @@ const Header = () => {
               styles.about_link
             }`}
             onClick={dropDownMenu}
+            ref={ref}
           >
             About
-            {showDropDown ? (
-              <FontAwesomeIcon
-                icon={faChevronUp}
-                className={styles.arrow_icon}
-              />
-            ) : (
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className={styles.arrow_icon}
-              />
-            )}
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              className={`${styles.arrow_icon}  ${
+                showDropDown && styles.rotate
+              }`}
+            />
             <div
               className={`${styles.dropdown_menu} ${
                 showDropDown && styles.show
               }`}
+              ref={ref}
             >
               <Link
                 to={{
@@ -118,6 +133,14 @@ const Header = () => {
               onClick={checkIfMenusOpen}
             >
               Sermons
+            </li>
+          </Link>
+          <Link to={`/Events`} style={{ textDecoration: "none" }}>
+            <li
+              className={`${styles.nav_list} ${open && styles.fade}`}
+              onClick={checkIfMenusOpen}
+            >
+              Events
             </li>
           </Link>
           <Link to={`/Give`} style={{ textDecoration: "none" }}>

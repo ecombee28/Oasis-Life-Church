@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../Styles/ComponentStyles/meetPastors.module.css";
+import { Link } from "react-router-dom";
 
 const MeetPastors = () => {
   return (
@@ -14,9 +15,28 @@ const MeetPastors = () => {
             have been ministers for more then 30 years.They have been the lead
             Pastors at Oasis Life for more then a year.
           </p>
-          <button className={`btn ${styles.meet_pastor_btn} `}>
-            Our Beliefs
-          </button>
+          <Link
+            to={{
+              pathname: "/About",
+              aboutProps: { menu_focus: "ourStory" },
+            }}
+            style={{ textDecoration: "none" }}
+          >
+            <button className={`btn ${styles.meet_pastor_btn} `}>
+              Our Story
+            </button>
+          </Link>
+          <Link
+            to={{
+              pathname: "/About",
+              aboutProps: { menu_focus: "beliefs" },
+            }}
+            style={{ textDecoration: "none" }}
+          >
+            <button className={`btn ${styles.meet_pastor_btn} `}>
+              Our Beliefs
+            </button>
+          </Link>
         </div>
       </div>
       <div className={styles.right_wrapper}>

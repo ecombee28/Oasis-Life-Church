@@ -54,7 +54,7 @@
 
 .scroll {
     position: absolute;
-    bottom: 60px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -64,7 +64,7 @@
 }
 
 .scroll .icon {
-    font-size: 2.7rem;
+    font-size: clamp(2rem, 2vw, 2.7rem);
     cursor: pointer;
 }
 
@@ -106,9 +106,20 @@
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:780px) {
     .btn_wrapper {
-        width: 100%;
+        width: 90%;
+        padding: 2px;
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+    .scroll {
+        bottom: 2px;
+        left: 50%;
     }
 }
 
@@ -120,9 +131,6 @@
     .hero_wrapper p {
         font-size: 1rem;
         text-align: center;
-    }
-    .btn_wrapper {
-        margin-top: 15px;
     }
     .scroll {
         bottom: 10px;

@@ -60,8 +60,8 @@
 
 .meet_pastor_btn {
     color: #000 !important;
-    font-size: 1.5rem;
-    margin: 50px 0px;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    margin: 50px 10px;
 }
 
 .meet_pastor_btn:hover {
@@ -97,5 +97,8 @@
         width: 90%;
         height: 400px;
         max-height: 600px;
+    }
+    .meet_pastor_btn {
+        margin: 20px 10px;
     }
 }
