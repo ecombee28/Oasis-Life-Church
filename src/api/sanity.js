@@ -19,7 +19,8 @@ export const imageBuilder = (source) => sanityImage(client).image(source);
 export const previewClient = sanityClient({
   ...options,
   useCdn: false,
-  token: process.env.SANITY_API_TOKEN,
+  token:
+    "skrhJMa7TNGnXBoEcawqUzRlTOFASN6YqDmtlSz8QWZjta0LGu654TG6KYpl8xzd89gc5ZWCBPgGjcCM7CBRAiXeukBBcN8hNWcS01HE7rDhShUMcFUChexGVgCKHVyqeg14G79bHxtDSzrZgvgRsmy7vCb7zP4CYdsFBAYDhEOdjglQoiih",
 });
 
 export default client;
