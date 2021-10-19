@@ -24,9 +24,9 @@ export const EventComponent = ({ match }) => {
 
   return (
     <div className={styles.main_container}>
-      <div className={styles.hero_container}>
+      {/* <div className={styles.hero_container}>
         <p className={styles.hero_title}>Events</p>
-      </div>
+      </div> */}
       <section className={styles.content_wrapper}>
         <p className={styles.title}>{!loading && blog.title}</p>
         <div className={styles.image_wrapper}>

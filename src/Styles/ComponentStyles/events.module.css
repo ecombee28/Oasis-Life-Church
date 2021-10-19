@@ -121,3 +121,15 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width:700px) {
+    .event_box {
+        width: 98%;
+    }
+    .event_box_msg {
+        width: 100%;
+    }
+    .event_box_img {
+        width: 100%;
+    }
+}

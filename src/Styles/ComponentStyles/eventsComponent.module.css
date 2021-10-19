@@ -27,7 +27,7 @@
 }
 
 .title {
-    font-size: clamp(2rem, 4vw, 6rem);
+    font-size: clamp(2.5rem, 4vw, 6rem);
     color: var(--text-gray);
     font-weight: 600;
 }
@@ -35,7 +35,8 @@
 .content_wrapper {
     width: 90%;
     height: auto;
-    min-height: 400px;
+    min-height: 90vh;
+    margin-top: 150px;
     margin-bottom: 90px;
     display: flex;
     flex-direction: column;
@@ -45,7 +46,7 @@
 }
 
 .image_wrapper {
-    width: 80%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -53,7 +54,7 @@
 }
 
 .image_wrapper img {
-    width: 80%;
+    width: 40vw;
     object-fit: contain;
 }
 
@@ -120,7 +121,14 @@
         align-items: center;
     }
     .image_wrapper img {
-        width: 100%;
+        width: 70vw;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .image_wrapper img {
+        width: 90vw;
         object-fit: contain;
     }
 }

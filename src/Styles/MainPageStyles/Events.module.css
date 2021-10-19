@@ -30,7 +30,7 @@
 .main_content {
     width: 90%;
     height: auto;
-    min-height: 400px;
+    min-height: 90vh;
     margin-top: 230px;
     margin-bottom: 90px;
     display: flex;

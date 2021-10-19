@@ -140,7 +140,7 @@
     }
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:950px) {
     .about_text_area {
         width: 90%;
         height: auto;
