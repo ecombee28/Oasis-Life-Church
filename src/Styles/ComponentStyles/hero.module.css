@@ -5,7 +5,7 @@
     position: relative;
     overflow: hidden;
     background: black;
-    background-image: url("../../images/praise-2.jpg");
+    background-image: url("../../images/demo.jpg");
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     padding: 0 20px;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(1, 48, 41, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;

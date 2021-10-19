@@ -11,7 +11,11 @@ const Footer = () => {
       <div className={styles.footer}>
         <div className={styles.footer_location}>
           <img src={logo} alt="" className={styles.footer_logo} />
-          <a href="https://www.google.com/maps/place/6301+W+Thomas+Rd,+Phoenix,+AZ+85033/@33.4798503,-112.1978841,17z/data=!3m1!4b1!4m5!3m4!1s0x872b151ea6fb8ccb:0x9b14dbae52eac9d6!8m2!3d33.4798458!4d-112.1956954">
+          <a
+            href="https://www.google.com/maps/place/6301+W+Thomas+Rd,+Phoenix,+AZ+85033/@33.4798503,-112.1978841,17z/data=!3m1!4b1!4m5!3m4!1s0x872b151ea6fb8ccb:0x9b14dbae52eac9d6!8m2!3d33.4798458!4d-112.1956954"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p>6301 W Thomas Rd</p>
             <p>Phoenix, AZ 85033</p>
           </a>

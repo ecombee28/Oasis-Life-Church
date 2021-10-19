@@ -8,12 +8,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
 export const About = (props) => {
-  const menuFocus = props.location.aboutProps.menu_focus;
-  const [focus, setFocus] = useState(menuFocus);
+  const [focus, setFocus] = useState("ourStory");
+  console.log(props.location);
 
   useEffect(() => {
     const changeProps = () => {
-      setFocus(props.location.aboutProps.menu_focus);
+      const ob = props.location;
+
+      if (ob.hasOwnProperty("aboutProps")) {
+        setFocus(props.location.aboutProps.menu_focus);
+      } else {
+        setFocus("ourStory");
+      }
     };
 
     changeProps();

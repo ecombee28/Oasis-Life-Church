@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../Styles/ComponentStyles/prayerRequest.module.css";
+import emailjs from "emailjs-com";
 
 const PrayerRequestComponent = () => {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const serviceId = "service_fw1hxme";
+  const userId = "user_MjiUwPxmwWo7paZkY1Oir";
+  const template = "oasis_prayer_request";
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(serviceId, template, e.target, userId).then(
+      (result) => {
+        setShowSuccess(true);
+        setTimeout(function () {
+          setShowSuccess(false);
+        }, 10000);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    e.target.reset();
+  }
+
   return (
     <div className={styles.main_prayer_container}>
       <div className={styles.prayer_wrapper}>
@@ -13,12 +36,34 @@ const PrayerRequestComponent = () => {
         </p>
         <p className={styles.scripture}>
           "Therefore I say unto you, What things soever ye desire, when ye pray,
-          believe that ye receive them, and ye shall have them."{" "}
+          believe that ye receive them, and ye shall have them."
           <span>- Mark 11:24</span>
         </p>
+
         <section className={styles.form}>
-          <form autoComplete="new-password" className={styles.form}>
-            <label>Name</label>
+          <div
+            className={`${styles.email_sent_successfully} ${
+              showSuccess && styles.show
+            }`}
+          >
+            <p className={styles.top}>Thank You</p>
+            <p>
+              We believe in the power of pray and we will stand in faith with
+              you that this request will be meet according to Gods will.
+            </p>
+          </div>
+
+          <form
+            onSubmit={sendEmail}
+            autoComplete="new-password"
+            className={styles.form}
+          >
+            <p>
+              <span className={styles.required}>* Required</span>
+            </p>
+            <label>
+              Name<span className={styles.required}>*</span>
+            </label>
             <input
               type="text"
               name="name"
@@ -37,7 +82,9 @@ const PrayerRequestComponent = () => {
               placeholder="Email"
               className={styles.input}
             />
-            <label>Prayer Request</label>
+            <label>
+              Prayer Request<span className={styles.required}>*</span>
+            </label>
             <textarea
               type="text"
               name="request"
