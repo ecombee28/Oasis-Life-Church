@@ -8,9 +8,9 @@ export const Give = () => {
         <section className={styles.give_text_area}>
           <p className={styles.title}>Give</p>
           <p className={styles.scripture}>
-            "And we know that for those who love God all things work together
-            for good, for those who are called according to His purpose." -
-            Romans 8:28
+            "Each of you should give what you have decided in your heart to
+            give, not reluctantly or under compulsion, for God loves a cheerful
+            giver." - 2 Corinthians 9:7
           </p>
         </section>
       </div>

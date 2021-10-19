@@ -20,8 +20,9 @@ const eventContainer = ({ blog }) => {
         <Link
           to={`/Events/${blog.slug.current}`}
           style={{ textDecoration: "none" }}
+          className={styles.info_btn}
         >
-          <button className={styles.info_btn}>More Info</button>
+          More Info
         </Link>
       </div>
     </div>

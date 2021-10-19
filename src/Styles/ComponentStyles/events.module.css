@@ -66,11 +66,13 @@
 }
 
 .info_btn {
-    padding: 6px 7px;
+    padding: 6px 11px;
     font-size: 1.3rem;
     background-color: transparent;
     cursor: pointer;
     transition: all .3s ease;
+    border: 3px solid var(--text-gray);
+    color: var(--text-gray);
 }
 
 .info_btn:hover {

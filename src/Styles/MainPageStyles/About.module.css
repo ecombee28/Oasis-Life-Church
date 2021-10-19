@@ -134,6 +134,12 @@
     min-height: 700px;
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .about_hero::before {
+        background-attachment: unset;
+    }
+}
+
 @media screen and (max-width:780px) {
     .about_text_area {
         width: 90%;

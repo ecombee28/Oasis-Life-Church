@@ -5,7 +5,7 @@
 
 .give_hero {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     background-color: rgb(0, 0, 0);
     position: relative;
     display: flex;
@@ -21,12 +21,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../../images/sermon.jpg");
-    background-position: center center;
+    background-image: url("../../images/giving.jpg");
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    opacity: .3;
+    opacity: .4;
 }
 
 .give_text_area {
@@ -57,4 +57,12 @@
     justify-content: center;
     align-items: center;
     font-size: clamp(2rem, 4vw, 5rem);
+}
+
+/* ipad */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .give_hero::before {
+        background-attachment: unset;
+    }
 }
