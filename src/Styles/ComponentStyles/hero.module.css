@@ -3,7 +3,6 @@
     min-height: 100vh;
     height: 100vh;
     position: relative;
-    overflow: hidden;
     background: black;
     background-image: url("../../images/hero.jpg");
     background-position: center center;
@@ -70,6 +69,14 @@
 
 .scroll p {
     font-size: 1rem;
+}
+
+/* ipad */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .hero_container {
+        background-attachment: unset;
+    }
 }
 
 @media screen and (max-width:680px) and (max-height:400px) {
