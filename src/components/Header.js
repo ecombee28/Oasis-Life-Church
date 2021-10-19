@@ -3,7 +3,7 @@ import styles from "../Styles/ComponentStyles/header.module.css";
 import Logo from "../images/logo-2.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
