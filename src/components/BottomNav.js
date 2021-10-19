@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "../Styles/ComponentStyles/bottomNav.module.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const BottomNav = () => {
   const [show, setShow] = useState(false);

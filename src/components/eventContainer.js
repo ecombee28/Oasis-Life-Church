@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../Styles/ComponentStyles/events.module.css";
 import UseImageBuilder from "../customHooks/useImageBuilder";
-import PortableText from "@sanity/block-content-to-react";
 import { Link } from "react-router-dom";
 
 const eventContainer = ({ blog }) => {
