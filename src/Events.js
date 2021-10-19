@@ -19,10 +19,11 @@ export const Events = () => {
 
   return (
     <div className={styles.main_wrapper}>
-      <div className={styles.hero_container}>
+      {/* <div className={styles.hero_container}>
         <p className={styles.hero_title}>Events</p>
-      </div>
+      </div> */}
       <div className={styles.main_content}>
+        <p className={styles.title}>Events</p>
         {loading ? (
           <p className={styles.loading}>Loading...</p>
         ) : (

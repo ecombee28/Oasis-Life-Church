@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = (props) => {
   const [open, setOpen] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
   const ref = useRef();
@@ -41,6 +41,12 @@ const Header = () => {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
   }, [showDropDown]);
+
+  useEffect(() => {
+    console.log(window.location.pathname);
+  }, [props]);
+
+  console.log("eric");
 
   return (
     <>

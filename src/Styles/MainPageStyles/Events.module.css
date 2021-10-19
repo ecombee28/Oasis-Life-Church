@@ -31,11 +31,18 @@
     width: 90%;
     height: auto;
     min-height: 400px;
+    margin-top: 230px;
     margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.title {
+    font-size: clamp(3rem, 5vw, 8rem);
+    font-weight: 600;
+    margin-bottom: 50px;
 }
 
 .loading {

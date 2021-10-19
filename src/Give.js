@@ -4,7 +4,7 @@ import styles from "./Styles/MainPageStyles/Give.module.css";
 export const Give = () => {
   return (
     <div className={styles.main_give_container}>
-      <div className={styles.give_hero}>
+      {/* <div className={styles.give_hero}>
         <section className={styles.give_text_area}>
           <p className={styles.title}>Give</p>
           <p className={styles.scripture}>
@@ -13,7 +13,7 @@ export const Give = () => {
             giver." - 2 Corinthians 9:7
           </p>
         </section>
-      </div>
+      </div> */}
       <div className={styles.give_wrapper}>
         <h1>Coming Soon!</h1>
       </div>

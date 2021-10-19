@@ -52,7 +52,7 @@
 .main_content {
     width: 90%;
     height: auto;
-    margin: 20px auto 30px auto;
+    margin: 190px auto 30px auto;
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -160,20 +160,23 @@
         gap: 50px;
     }
     .menu_panel {
-        width: 100%;
+        width: 98%;
         max-width: 100%;
         height: auto;
         padding-top: 0px;
+        padding-bottom: 20px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 60px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 140px 0 60px 20px;
+        position: relative;
+        border-bottom: 2px solid var(--gray);
     }
     .menu_links {
         width: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         gap: 30px;
     }
     .title_wrapper {
@@ -186,8 +189,8 @@
         height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         gap: 20px;
     }
     .hide_icon {
@@ -197,8 +200,9 @@
         visibility: hidden;
     }
     .display_panel {
-        width: 100%;
+        width: 90%;
         height: auto;
         min-height: 700px;
+        margin: auto;
     }
 }

@@ -9,7 +9,6 @@ import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
 export const About = (props) => {
   const [focus, setFocus] = useState("ourStory");
-  console.log(props.location);
 
   useEffect(() => {
     const changeProps = () => {
@@ -27,15 +26,14 @@ export const About = (props) => {
 
   return (
     <div className={styles.main_about_container}>
-      <div className={styles.about_hero}>
+      {/* <div className={styles.about_hero}>
         <section className={styles.about_text_area}>
-          <p className={styles.title}>About</p>
           <p>
             "In the world you will have tribulation. But take heart; I have
             overcome the world" - John 16:33
           </p>
         </section>
-      </div>
+      </div> */}
       <div className={styles.main_content}>
         <section className={styles.menu_panel}>
           <div className={styles.menu_links}>

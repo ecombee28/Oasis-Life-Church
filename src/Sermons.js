@@ -4,7 +4,7 @@ import styles from "./Styles/MainPageStyles/Sermons.module.css";
 export const Sermons = () => {
   return (
     <div className={styles.main_sermons_container}>
-      <div className={styles.sermons_hero}>
+      {/* <div className={styles.sermons_hero}>
         <section className={styles.sermons_text_area}>
           <p className={styles.title}>Sermons</p>
           <p className={styles.scripture}>
@@ -13,7 +13,7 @@ export const Sermons = () => {
             Romans 8:28
           </p>
         </section>
-      </div>
+      </div> */}
       <div className={styles.sermons_wrapper}>
         <h1>Coming Soon!</h1>
       </div>
