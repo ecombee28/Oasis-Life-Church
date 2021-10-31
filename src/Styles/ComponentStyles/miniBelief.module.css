@@ -40,7 +40,7 @@
 }
 
 .body_container p {
-    font-size: clamp(.9rem, 3vw, 1.2rem);
+    font-size: clamp(.9rem, 3vw, 1.1rem);
     opacity: 0;
     transition-delay: 650ms;
     transition: opacity 4s ease;
@@ -60,10 +60,17 @@
 .icon {
     font-size: clamp(1rem, 3vw, 1.6rem);
     color: var(--white);
-    transition: all .8s cubic-bezier(0.25, 0.1, 0.71, 1);
+    transition: all .5s cubic-bezier(0.25, 0.1, 0.71, 1);
+    transition-delay: .2s;
 }
 
 .rotate {
     transform: rotate(180deg);
     transition: all .5s cubic-bezier(0.25, 0.1, 0.71, 1);
+}
+
+@media screen and (max-width: 1500px) {
+    .show {
+        max-height: 900px;
+    }
 }

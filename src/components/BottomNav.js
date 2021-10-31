@@ -69,7 +69,7 @@ const BottomNav = () => {
             }`}
             onClick={closeMenu}
           >
-            Our Beliefs
+            What We Believe
           </div>
         </Link>
         <Link
