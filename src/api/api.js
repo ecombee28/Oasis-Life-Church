@@ -1,5 +1,4 @@
 import client, { previewClient } from "./sanity";
-import axios from "axios";
 
 const postFields = `
 _id,

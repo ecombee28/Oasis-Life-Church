@@ -61,14 +61,13 @@
 }
 
 .menu_panel {
-    width: 28%;
-    max-width: 440px;
+    width: 35%;
     height: 500px;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .main_links_title {
@@ -89,8 +88,9 @@
 
 .title_wrapper {
     width: 100%;
+    min-width: 350px;
     height: auto;
-    text-align: left;
+    text-align: center;
 }
 
 .link_wrapper {
@@ -105,7 +105,7 @@
 
 .selections {
     list-style: none;
-    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     cursor: pointer;
     margin-bottom: 10px;
     display: flex;
@@ -123,15 +123,20 @@
 }
 
 .bold {
-    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     font-weight: 600;
     color: var(--blue);
 }
 
 .display_panel {
-    width: 72%;
+    width: 67%;
     height: auto;
     min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 110px;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -156,31 +161,31 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         gap: 50px;
     }
     .menu_panel {
         width: 98%;
-        max-width: 100%;
         height: auto;
         padding-top: 0px;
         padding-bottom: 20px;
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: 140px 0 60px 20px;
+        justify-content: center;
+        align-items: center;
+        margin: 140px 0 60px 0px;
         position: relative;
         border-bottom: 2px solid var(--gray);
     }
     .menu_links {
         width: 100%;
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: 30px;
     }
     .title_wrapper {
         width: 100%;
+        min-width: 0px;
         height: auto;
         text-align: center;
     }
@@ -189,8 +194,8 @@
         height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: 20px;
     }
     .hide_icon {
@@ -200,9 +205,8 @@
         visibility: hidden;
     }
     .display_panel {
-        width: 90%;
+        width: 98%;
         height: auto;
         min-height: 700px;
-        margin: auto;
     }
 }

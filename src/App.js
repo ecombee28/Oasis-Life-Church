@@ -9,6 +9,7 @@ import { EventComponent } from "./components/EventComponent";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AllwaysScrollToTop from "./components/AllwaysScrollToTop";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

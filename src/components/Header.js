@@ -104,7 +104,7 @@ const Header = (props) => {
                 style={{ textDecoration: "none" }}
               >
                 <p className={styles.drop_menu_link} onClick={checkIfMenusOpen}>
-                  Our Beliefs
+                  What we believe
                 </p>
               </Link>
               <Link

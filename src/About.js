@@ -26,14 +26,6 @@ export const About = (props) => {
 
   return (
     <div className={styles.main_about_container}>
-      {/* <div className={styles.about_hero}>
-        <section className={styles.about_text_area}>
-          <p>
-            "In the world you will have tribulation. But take heart; I have
-            overcome the world" - John 16:33
-          </p>
-        </section>
-      </div> */}
       <div className={styles.main_content}>
         <section className={styles.menu_panel}>
           <div className={styles.menu_links}>
@@ -61,7 +53,7 @@ export const About = (props) => {
                   focus === "beliefs" && styles.bold
                 }`}
               >
-                Our Beliefs
+                What We Believe
                 <FontAwesomeIcon
                   icon={faAngleDoubleRight}
                   className={`${
